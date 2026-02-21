@@ -8,6 +8,70 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
+.featured{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:space-between;
+padding:120px 10%;
+background:#f5f5f7;
+}
+
+.featured-content{
+flex:1;
+min-width:300px;
+}
+
+.featured-content h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.featured-content p{
+font-size:20px;
+color:#555;
+margin-bottom:20px;
+}
+
+.highlights{
+list-style:none;
+margin-bottom:30px;
+}
+
+.highlights li{
+margin-bottom:10px;
+font-size:18px;
+}
+
+.buttons .btn{
+margin-right:15px;
+}
+
+.btn.secondary{
+background:#111;
+}
+
+.featured-image{
+flex:1;
+min-width:300px;
+text-align:center;
+}
+
+.featured-image img{
+max-width:100%;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.1);
+transition:0.5s;
+}
+
+.featured-image img:hover{
+transform:scale(1.03);
+}
+
+
+
+
+
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
 body{
