@@ -3,205 +3,199 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CarMandi.in | Buy & Sell Used Cars in India</title>
+<title>DeepReview | Honest Product Reviews</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
-body{background:#f4f6f9;color:#333;}
+body{
+background:#fff;
+color:#111;
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
 
 header{
-background:#0f172a;
-color:white;
-padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:25px 8%;
+background:white;
+position:sticky;
+top:0;
+border-bottom:1px solid #eee;
+z-index:1000;
 }
 
-header h1{font-size:24px;}
+header h1{
+font-weight:800;
+font-size:20px;
+}
 
 nav a{
-color:white;
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
-font-size:14px;
+color:#333;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#0071e3;
 }
 
 .hero{
-background:linear-gradient(135deg,#1e3a8a,#2563eb);
-color:white;
-padding:80px 10%;
 text-align:center;
+padding:140px 10%;
+opacity:0;
+transform:translateY(30px);
+transition:all 1s ease;
 }
 
-.hero h2{font-size:36px;margin-bottom:20px;}
+.hero.show{
+opacity:1;
+transform:translateY(0);
+}
 
-.hero input, .hero select{
-padding:12px;
-width:250px;
-margin:10px;
-border-radius:6px;
-border:none;
+.hero h2{
+font-size:54px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+color:#555;
+margin-bottom:35px;
 }
 
 .btn{
-background:#ffcc00;
-color:black;
-padding:12px 20px;
-border:none;
-border-radius:6px;
-cursor:pointer;
+background:#0071e3;
+color:white;
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
 font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#005bb5;
 }
 
 .section{
-padding:60px 10%;
+padding:120px 10%;
+text-align:center;
+}
+
+.section h3{
+font-size:36px;
+margin-bottom:60px;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
 }
 
 .card{
-background:white;
-padding:20px;
-border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+background:#f9f9f9;
+padding:50px 25px;
+border-radius:25px;
+transition:0.5s;
+opacity:0;
+transform:translateY(40px);
 }
 
-.card img{
-width:100%;
-border-radius:8px;
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
-form input, form select{
-width:100%;
-padding:10px;
-margin:10px 0;
-border-radius:6px;
-border:1px solid #ccc;
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.card h4{
+margin-bottom:15px;
+font-size:22px;
 }
 
 footer{
-background:#0f172a;
-color:white;
 text-align:center;
-padding:20px;
-margin-top:40px;
+padding:50px;
+background:#f5f5f7;
+margin-top:100px;
+color:#666;
+font-size:14px;
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>🚗 CarMandi.in</h1>
+<h1>DeepReview</h1>
 <nav>
-<a href="#">Buy Car</a>
-<a href="#">Sell Car</a>
-<a href="#">Reviews</a>
-<a href="#">Insurance</a>
+<a href="#">Mobiles</a>
+<a href="#">Laptops</a>
+<a href="#">Accessories</a>
 </nav>
 </header>
 
 <section class="hero">
-<h2>Find Your Perfect Used Car in India</h2>
-
-<input type="text" placeholder="Enter City">
-<select>
-<option>Select Budget</option>
-<option>Under ₹3 Lakh</option>
-<option>Under ₹5 Lakh</option>
-<option>Under ₹10 Lakh</option>
-</select>
-<button class="btn">Search</button>
-
+<h2>Think Before You Buy.</h2>
+<p>Deep, honest and unbiased reviews of the latest tech products.</p>
+<a href="#" class="btn">Explore Reviews</a>
 </section>
 
 <section class="section">
-<h2>Featured Cars</h2>
-
-<div class="cards">
-
-<div class="card">
-<img src="https://via.placeholder.com/300x200">
-<h3>Hyundai i20 2019</h3>
-<p>₹5,20,000 | Petrol | 40,000 km</p>
-<button class="btn">View Details</button>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/300x200">
-<h3>Maruti Swift 2018</h3>
-<p>₹4,50,000 | Diesel | 55,000 km</p>
-<button class="btn">View Details</button>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/300x200">
-<h3>Tata Nexon 2020</h3>
-<p>₹8,90,000 | Petrol | 30,000 km</p>
-<button class="btn">View Details</button>
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<h2>Sell Your Car</h2>
-
-<form>
-<input type="text" placeholder="Your Name">
-<input type="text" placeholder="Mobile Number">
-<input type="text" placeholder="Car Model">
-<input type="text" placeholder="City">
-<button class="btn">Submit Details</button>
-</form>
-
-</section>
-
-<section class="section">
-<h2>Car Insurance</h2>
-
-<form>
-<input type="text" placeholder="Car Number">
-<select>
-<option>Select Insurance Type</option>
-<option>Third Party</option>
-<option>Comprehensive</option>
-</select>
-<input type="text" placeholder="Mobile Number">
-<button class="btn">Get Best Quote</button>
-</form>
-
-</section>
-
-<section class="section">
-<h2>Latest Reviews</h2>
+<h3>Popular Categories</h3>
 
 <div class="cards">
 <div class="card">
-<h3>Best SUV Under ₹10 Lakh</h3>
-<p>Top SUVs comparison with mileage & price analysis.</p>
-<button class="btn">Read More</button>
+<h4>📱 Smartphones</h4>
+<p>Latest mobile reviews, comparisons and buying guides.</p>
 </div>
 
 <div class="card">
-<h3>Petrol vs Diesel – Which is Better?</h3>
-<p>Complete comparison guide before buying a car.</p>
-<button class="btn">Read More</button>
+<h4>💻 Laptops</h4>
+<p>Best laptops under budget with real-world analysis.</p>
+</div>
+
+<div class="card">
+<h4>🎧 Accessories</h4>
+<p>Top earbuds, smartwatches and gadgets reviewed deeply.</p>
 </div>
 </div>
 
 </section>
 
 <footer>
-© 2026 CarMandi.in | All India Used Car Marketplace
+© 2026 DeepReview.in | Premium Review Platform
 </footer>
+
+<script>
+// Scroll reveal animation
+window.addEventListener("scroll", function(){
+document.querySelectorAll(".card").forEach(card=>{
+let position = card.getBoundingClientRect().top;
+let screenHeight = window.innerHeight;
+if(position < screenHeight - 100){
+card.classList.add("show");
+}
+});
+
+let hero = document.querySelector(".hero");
+if(window.scrollY > 50){
+hero.classList.add("show");
+}
+});
+</script>
 
 </body>
 </html>
