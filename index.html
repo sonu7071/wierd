@@ -1,331 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DeepReview | Honest Product Reviews</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-
-
-.btn{
-display:inline-block;
-padding:14px 30px;
-border-radius:50px;
-text-decoration:none;
-color:white;
-background:#0071e3;
-font-weight:500;
-transition:0.3s;
-}
+<title>WhatsApp OTP Test</title>
 <style>
-.featured{
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-justify-content:space-between;
-padding:120px 10%;
-background:#f5f5f7;
-}
-
-.featured-content{
-flex:1;
-min-width:300px;
-}
-
-.featured-content h2{
-font-size:48px;
-margin-bottom:20px;
-}
-
-.featured-content p{
-font-size:20px;
-color:#555;
-margin-bottom:20px;
-}
-
-.highlights{
-list-style:none;
-margin-bottom:30px;
-}
-
-.highlights li{
-margin-bottom:10px;
-font-size:18px;
-}
-
-.buttons .btn{
-margin-right:15px;
-}
-
-.btn.secondary{
-background:#111;
-}
-
-.featured-image{
-flex:1;
-min-width:300px;
-text-align:center;
-}
-
-.featured-image img{
-max-width:100%;
-border-radius:20px;
-box-shadow:0 20px 50px rgba(0,0,0,0.1);
-transition:0.5s;
-}
-
-.featured-image img:hover{
-transform:scale(1.03);
-}
-
-
-
-
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-
 body{
-background:#fff;
-color:#111;
-scroll-behavior:smooth;
-overflow-x:hidden;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 8%;
-background:white;
-position:sticky;
-top:0;
-border-bottom:1px solid #eee;
-z-index:1000;
-}
-
-header h1{
-font-weight:800;
-font-size:20px;
-}
-
-nav a{
-margin-left:25px;
-text-decoration:none;
-color:#333;
-font-weight:500;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#0071e3;
-}
-
-.hero{
+font-family:Arial;
 text-align:center;
-padding:140px 10%;
-opacity:0;
-transform:translateY(30px);
-transition:all 1s ease;
+margin-top:80px;
 }
 
-.hero.show{
-opacity:1;
-transform:translateY(0);
+input{
+padding:10px;
+margin:10px;
+width:220px;
 }
 
-.hero h2{
-font-size:54px;
-font-weight:800;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:22px;
-color:#555;
-margin-bottom:35px;
-}
-
-.btn{
-background:#0071e3;
+button{
+padding:10px 20px;
+background:#25D366;
 color:white;
-padding:14px 28px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#005bb5;
-}
-
-.section{
-padding:120px 10%;
-text-align:center;
-}
-
-.section h3{
-font-size:36px;
-margin-bottom:60px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;
-}
-
-.card{
-background:#f9f9f9;
-padding:50px 25px;
-border-radius:25px;
-transition:0.5s;
-opacity:0;
-transform:translateY(40px);
-}
-
-.card.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-}
-
-.card h4{
-margin-bottom:15px;
-font-size:22px;
-}
-
-footer{
-text-align:center;
-padding:50px;
-background:#f5f5f7;
-margin-top:100px;
-color:#666;
-font-size:14px;
-}
-
-@media (max-width: 768px){
-
-.featured{
-flex-direction: column;
-text-align:center;
-padding:60px 5%;
-}
-
-.featured-content h2{
-font-size:36px;
-}
-
-.featured-content p{
-font-size:18px;
-}
-
-.buttons{
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.buttons .btn{
-margin:10px 0;
-width:80%;
-}
-
-.featured-image{
-margin-top:40px;
-}
-
+border:none;
+border-radius:6px;
+font-size:16px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>DeepReview</h1>
-<nav>
-<a href="#">Mobiles</a>
-<a href="#">Laptops</a>
-<a href="#">Accessories</a>
-</nav>
-</header>
+<h2>WhatsApp OTP Verification Demo</h2>
 
-<section class="hero">
-<h2>Think Before You Buy.</h2>
-<p>Deep, honest and unbiased reviews of the latest tech products.</p>
-<a href="#" class="btn">Explore Reviews</a>
-</section>
+<input type="text" id="phone" placeholder="Enter Mobile Number"><br>
 
-<section class="section">
-<h3>Popular Categories</h3>
+<button onclick="sendOTP()">Send OTP via WhatsApp</button><br>
 
-<div class="cards">
-<div class="card">
-<h4>📱 Smartphones</h4>
-<p>Latest mobile reviews, comparisons and buying guides.</p>
-</div>
+<input type="text" id="otp" placeholder="Enter OTP"><br>
 
-<div class="card">
-<h4>💻 Laptops</h4>
-<p>Best laptops under budget with real-world analysis.</p>
-</div>
+<button onclick="verifyOTP()">Verify OTP</button>
 
-<div class="card">
-<h4>🎧 Accessories</h4>
-<p>Top earbuds, smartwatches and gadgets reviewed deeply.</p>
-</div>
-</div>
-
-</section>
-<section class="featured">
-<div class="featured-content">
-<h2>iPhone 15 Pro Review</h2>
-<p>A deep dive into performance, camera quality and real-world battery life.</p>
-
-<ul class="highlights">
-<li>⚡ A17 Pro Performance Tested</li>
-<li>📸 48MP Pro Camera Analysis</li>
-<li>🔋 Real Battery Drain Results</li>
-</ul>
-
-<div class="buttons">
-<a href="#" class="btn">Read Full Review</a>
-<a href="#" class="btn secondary">Buy Now</a>
-</div>
-</div>
-
-<div class="featured-image">
-<img src="iphone-15-pro-and-pro-max-natural-titanium-hd-png-11694982194dfthmr7e8c.png" alt="Featured Product">
-</div>
-</section>
-
-<footer>
-© 2026 DeepReview.in | Premium Review Platform
-</footer>
+<p id="result"></p>
 
 <script>
-// Scroll reveal animation
-window.addEventListener("scroll", function(){
-document.querySelectorAll(".card").forEach(card=>{
-let position = card.getBoundingClientRect().top;
-let screenHeight = window.innerHeight;
-if(position < screenHeight - 100){
-card.classList.add("show");
-}
-});
 
-let hero = document.querySelector(".hero");
-if(window.scrollY > 50){
-hero.classList.add("show");
+let generatedOTP;
+
+function sendOTP(){
+
+generatedOTP = Math.floor(1000 + Math.random() * 9000);
+
+let phone = document.getElementById("phone").value;
+
+let message = "My OTP code is: " + generatedOTP;
+
+let url = "https://wa.me/91" + phone + "?text=" + encodeURIComponent(message);
+
+window.open(url, "_blank");
+
+alert("OTP Generated: " + generatedOTP + " (Demo ke liye dikhaya gaya)");
 }
-});
+
+function verifyOTP(){
+
+let userOTP = document.getElementById("otp").value;
+
+if(userOTP == generatedOTP){
+document.getElementById("result").innerHTML = "✅ OTP Verified Successfully";
+}else{
+document.getElementById("result").innerHTML = "❌ Wrong OTP";
+}
+
+}
+
 </script>
 
 </body>
