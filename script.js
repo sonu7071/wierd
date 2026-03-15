@@ -5,7 +5,7 @@ let pin=document.getElementById("pin").value
 if(pin.length==6){
 
 document.getElementById("pinresult").innerHTML=
-'<img src="/showthisafterpincodeentered.png" height="20"> Delivery Available'
+'<img src="showthisafterpincodeentered.png" height="20"> Delivery Available'
 
 }else{
 
